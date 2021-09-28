@@ -3,9 +3,9 @@
  /* Arduino example sketch to control a JSN-SR04T ultrasonic distance sensor with Arduino. No library needed. More info: https://www.makerguides.com */
 
 // Define Trig and Echo pin:
-#define trigPin 2
-#define echoPin 4
-#define relay 7
+#define trigPin 26 //2
+#define echoPin 18 // 4
+#define relay 22 // 7
 
 // Define variables:
 long duration;
@@ -48,11 +48,12 @@ void loop() {
     digitalWrite(relay, HIGH);
     delay(5000);
     digitalWrite(relay, LOW); 
+    delay(200);
   }
 
-//    while (distance == 18){
+//    while (distance >= 18 && distance <= 22){
 //      digitalWrite(relay, HIGH);
-//      delay(2000);
+//      delay(2000);+
 //      if (distance != 18){
 //        digitalWrite(relay, LOW);
 //        break;
@@ -61,7 +62,7 @@ void loop() {
 //      }
 //  }
   
-  delay(200);
+  delay(500);
   
  
 }
