@@ -44,7 +44,7 @@ void loop() {
   Serial.print(distance);
   Serial.println(" cm");
 
-  if (distance == 18){
+  if (distance <= 18){
     digitalWrite(relay, HIGH);
     delay(5000);
     digitalWrite(relay, LOW); 
